@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * Description : main - Prints a number and if is positive or negative
+ * Description : main - Prints the alphabet in lowercase, and then in uppercase
+(* 
  * Return: 0 if all its ok.
  */
 int main(void)

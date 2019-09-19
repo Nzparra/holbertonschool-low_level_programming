@@ -15,21 +15,21 @@ int main(void)
 			{
 				while (c <= '9')
 				{
-					if ((a < b && b < c && a != b && b != c))
+				if ((a < b && b < c && a != b && b != c))
+				{
+					putchar(a);
+					putchar(b);
+					putchar(c);
+					if (a == '7' && b == '8' && c == '9')
 					{
-						putchar(a);
-						putchar(b);
-						putchar(c);
-						if (a == '7' && b == '8' && c == '9')
-						{
-							putchar('\n');
-						}
-						else
-						{
-							putchar(',');
-							putchar(' ');
-						}
+						putchar('\n');
 					}
+					else
+					{
+					putchar(',');
+					putchar(' ');
+					}
+				}
 				c++;
 				}
 			c = '0';

@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
-  * Description : main - Prints a number and if is positive or negative
-  * Return: 0 if all its ok.
+  * Description : print_alpabhet - Prints lower case alphabet
+  * Return: null
   */
 void print_alphabet(void)
 {

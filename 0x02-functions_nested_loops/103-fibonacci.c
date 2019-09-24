@@ -30,6 +30,6 @@ int main(void)
 		number_one = number_two;
 		number_two = sum_fibonacci;
 	}
-	printf("%ld\n", sum_fibonacci);
+	printf("%ld\n", even_fibosum);
 	return (0);
 }

@@ -1,8 +1,7 @@
-#include "holberton.h"
 #include <stdio.h>
 /**
-  * main - Prints the sum of multiples of 3 and 5
-  * Return : 0 if all is ok
+  * Description : main - Prints the sum of multiples of 3 and 5
+  * Return: 0 if all its ok.
   */
 int main(void)
 {

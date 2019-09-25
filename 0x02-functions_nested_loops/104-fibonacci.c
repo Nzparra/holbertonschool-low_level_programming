@@ -29,7 +29,7 @@ int main(void)
 	half_one = number_one % 1000;
 	number_two = number_two / 1000;
        	half_two = number_two % 1000;
-	for(fibonacci_number = 93; fibonacci_number <= 99; fibonacci_number++)
+	for(fibonacci_number = 93; fibonacci_number <= 98; fibonacci_number++)
 	{	
 		half_sum = (half_one + half_two) / 1000;
 		final_sum = (half_one + half_two) - half_sum * 1000;
@@ -46,7 +46,7 @@ int main(void)
 		{
 			printf("%lu0%lu", sum_fibonacci, final_sum);
 		}
-		if (fibonacci_number != 99)
+		if (fibonacci_number != 98)
 		{
 			printf(", ");
 		}

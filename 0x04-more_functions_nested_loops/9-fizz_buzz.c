@@ -14,6 +14,8 @@ int main(void)
 		{
 			printf("FizzBuzz");
 		}
+		else
+		{
 		if (c % 3 == 0)
 		{
 			printf("Fizz");
@@ -27,6 +29,7 @@ int main(void)
 		else
 		{
 			printf("%d", c);
+		}
 		}
 		}
 		printf(" ");

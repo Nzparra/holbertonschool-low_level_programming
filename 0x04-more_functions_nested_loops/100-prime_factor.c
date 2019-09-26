@@ -10,9 +10,9 @@ int main(void)
 	int c;
 	long number =  612852475143;
 
-	for(c = (int) sqrt(number); c > 2; c++)
-	{	
-		if ( number % c == 0)
+	for (c = (int) sqrt(number); c > 2; c++)
+	{
+		if (number % c == 0)
 		{
 			printf("%d\n", c);
 			break;

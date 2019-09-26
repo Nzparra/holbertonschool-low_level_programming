@@ -1,12 +1,12 @@
 #include "holberton.h"
 /**
-  * _isupper - checks for uppercase
+  * _isdigit - checks for is digit
   * @c : char to check
   * Return: 1 if is uppercase , 0 if is other
   */
-int _isupper(char c)
+int _isdigit(char c)
 {
-	if (c >= 65 && c <= 90)
+	if (c >= 48 && c <= 57)
 	{
 		return (1);
 	}

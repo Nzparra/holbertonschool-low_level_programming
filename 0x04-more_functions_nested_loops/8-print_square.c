@@ -9,15 +9,19 @@ void print_square(int n)
 	int c;
 	int d = n;
 
+	if (n < 1)
+	{
+		_putchar('\n');
+	}
 	while (d > 0)
 	{
-	c = 1;
-	while (c <= n)
-	{
-		_putchar(35);
-		c++;
-	}
-	d--;
-	_putchar('\n');
+		c = 1;
+		while (c <= n)
+		{
+			_putchar(35);
+			c++;
+		}
+		d--;
+		_putchar('\n');
 	}
 }

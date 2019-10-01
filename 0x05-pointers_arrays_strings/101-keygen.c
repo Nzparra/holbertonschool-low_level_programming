@@ -6,7 +6,6 @@
   *
   * Return: Null.
   */
-
 int main(void)
 {
 	int num_random;
@@ -19,12 +18,12 @@ int main(void)
 		num_random = (rand() % 125) + 1;
 		if (sum + num_random == 2772)
 		{
-			putchar(num_random);
+			printf("%c",num_random);
 			break;
 		}
 		else if (sum + num_random  < 2772)
 		{
-			putchar(num_random);
+			printf("%c",num_random);
 			sum += num_random;
 		}
 	}

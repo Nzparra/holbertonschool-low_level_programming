@@ -16,7 +16,7 @@ int main(void)
 	sum = 0;
 	while (1)
 	{
-		num_random = 32 + rand() % 95;
+		num_random = (rand() % 125) + 1;
 		if (sum + num_random == 2772)
 		{
 			putchar(num_random);

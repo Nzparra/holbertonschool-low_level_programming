@@ -14,7 +14,7 @@ int _atoi(char *s)
 	negative = 1;
 	for (l = 0 ; s[l] != '\0'; l++)
 	{
-		if (s[l] == ';' || s[l] == ',')
+		if (s[l] == ',')
 		{
 			break;
 		}

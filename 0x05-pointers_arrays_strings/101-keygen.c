@@ -22,7 +22,7 @@ int main(void)
 			putchar(num_random);
 			break;
 		}
-		else if (sum + num_random + 32 < 2772)
+		else if (sum + num_random  < 2772)
 		{
 			putchar(num_random);
 			sum += num_random;

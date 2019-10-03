@@ -8,8 +8,8 @@ char *rot13(char *e)
 {
 	int d;
 	int c;
-	char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char replace[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char letters[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+	char replace[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
 
 	for (d = 0; e[d] != '\0' ; d++)
 	{
@@ -18,6 +18,7 @@ char *rot13(char *e)
 			if (e[d] == letters[c])
 			{
 				e[d] = replace[c];
+				break;
 			}
 		}
 	}

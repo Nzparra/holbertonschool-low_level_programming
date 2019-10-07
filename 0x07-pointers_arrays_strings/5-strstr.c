@@ -7,7 +7,7 @@
   */
 int match(char *haystack, char *needle)
 {
-	while (*haystack && *needle && *haystack != '\0' && needle != '\0')
+	while (*haystack && *needle && *haystack != '\0' && *needle != '\0')
 	{
 		if (*haystack != *needle)
 		{

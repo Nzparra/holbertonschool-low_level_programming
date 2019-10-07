@@ -1,24 +1,5 @@
 #include "holberton.h"
 /**
-  * match - Function that searches a string
-  * @haystack : string
-  * @needle : character to match
-  * Return: Pointer to the byte s that matches
-  */
-int match(char *haystack, char *needle)
-{
-	while (*haystack && *needle && *haystack != '\0' && *needle != '\0')
-	{
-		if (*haystack != *needle)
-		{
-			return (0);
-		}
-		haystack++;
-		needle++;
-	}
-	return (*needle == '\0');
-}
-/**
   * _strstr - Function that searches a string
   * @haystack : string
   * @needle : character to match
@@ -26,13 +7,19 @@ int match(char *haystack, char *needle)
   */
 char *_strstr(char *haystack, char *needle)
 {
-	while (*haystack != '\0')
+	if (*needle == 0)
 	{
-		if ((*haystack == *needle) && match(haystack, needle))
-		{
-			return (haystack);
-		}
-		haystack++;
+		return ((char *)haystack);
+
 	}
-	return (0);
+	if (*haystack == 0)
+	{
+		return (0);
+	}
+	if (*haystack == *needle && _strstr(haystack + 1, needle + 1) == haystack + 1)
+	{
+		return ((char *)haystack);
+	}
+	return (_strstr(haystack + 1, needle));
 }
+

@@ -14,15 +14,15 @@ char *str_concat(char *s1, char *s2)
 	int d;
 	char *p;
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		return (NULL);
-	}
 	for (size1 = 0; s1[size1]; size1++)
 	{}
 	for (size2 = 0; s2[size2]; size2++)
 	{}
 	p = malloc((size1 * sizeof(*s1)) + (size2 * sizeof(*s2) + 1));
+	if (s1 == NULL || s2 == NULL || p == NULL)
+	{
+		return (NULL);
+	}
 	for (c = 0, d = 0 ; c < (size1 + size2 + 1); c++)
 	{
 		if (c < size1)

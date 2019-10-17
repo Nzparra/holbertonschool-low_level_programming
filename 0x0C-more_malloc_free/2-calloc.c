@@ -22,10 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	for (c = 0 ; c < (size * nmemb) ; c++)
 	{
-		if (p[c] != 0)
-		{
 			p[c] = 0;
-		}
 	}
 	return (p);
 }

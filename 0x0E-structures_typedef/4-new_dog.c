@@ -23,13 +23,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{}
 	for (d = 0; owner[d]; d++)
 	{}
-	name1 = malloc(sizeof(*name1) * c);
+	name1 = malloc(sizeof(*name1) * c + 1);
 	if (name1 == NULL)
 	{
 		free(dante);
 		return (NULL);
 	}
-	owner1 = malloc(sizeof(*owner1) * d);
+	owner1 = malloc(sizeof(*owner1) * d + 1);
 	if (owner1 == NULL)
 	{
 		free(name1);

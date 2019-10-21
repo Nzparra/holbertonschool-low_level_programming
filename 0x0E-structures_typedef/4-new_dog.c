@@ -42,12 +42,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	for (c = 0; name[c] != '\0'; c++)
 	{
-		name1[e] = name[e];
+		name1[c] = name[c];
 	}
 	name1[c] = '\0';
 	for (c = 0; owner [c] != '\0'; c++)
 	{
-		owner1[d] = owner[d];
+		owner1[c] = owner[c];
 	}
 	owner1[c] = '\0';
 	dante->name = name1;

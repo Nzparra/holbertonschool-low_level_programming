@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 /**
- * print_numbers - Funtcion that prints numbers
+ * print_strings - Funtcion that prints strings
  * @n: Count of number to sum
  * @separator: The string to be printedbetweem
  * Return: NULL
@@ -10,38 +10,35 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int c;
 	va_list string;
-	char * antslid;
+	char *antslid;
 
 	if (separator == NULL)
 	{
 		separator = "";
 	}
 	va_start(string, n);
-	for (c = 0; c < n; c++)
+	c = 0;
+	while (c < n)
 	{
 		antslid = va_arg(string, char *);
-		if (c < n - 1)
+		if (c != n - 1)
 		{
-			if (antslid != NULL)
+			if (antslid == NULL)
 			{
-				printf("%s%s", antslid, separator);
+				antslid = "(nill)";
 			}
-			else
-			{
-				printf("(nil)");
-			}
+			printf("%s%s", antslid, separator);
 		}
 		else
 		{
-			if (antslid != NULL)
+			if (antslid == NULL)
 			{
-					printf("%s\n", antslid);
+				antslid = "(nill)";
 			}
-			else
-			{
-				printf("(nil)\n");
-			}
+			printf("%s", antslid);
 		}
+		c++;
 	}
 	va_end(string);
+	printf("\n");
 }

@@ -1,5 +1,5 @@
-#ifndef VLISTS
-#define Vlists
+#ifndef VLISTS_H
+#define VLISTS_H
 #include <stdarg.h>
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
@@ -10,8 +10,14 @@ void p_integer(va_list inputs);
 void p_float(va_list inputs);
 void p_string(va_list inputs);
 void p_string(va_list inputs);
-typedef struct lists{
+/**
+ * struct lists - structur
+ * @f : pointer
+ * @d : function
+ */
+typedef struct lists
+{
 	char *f;
-	void(*d)(va_list);
+	void (*d)(va_list);
 } li;
 #endif

@@ -56,7 +56,7 @@ void print_all(const char * const format, ...)
 	va_start(inputs, format);
 
 	c = 0;
-	while (format[c])
+	while (format && format[c])
 	{
 		e = 0;
 		while (types[e].f)

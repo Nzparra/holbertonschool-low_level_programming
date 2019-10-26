@@ -3,13 +3,13 @@ section .text
 
 main:
 
-	mov	edx,len
-	mov	ecx,msg
-	mov	ebx,1
-	mov	eax,4
+	mov	rdx,len
+	mov	rcx,msg
+	mov	rbx,1
+	mov	rax,4
 	int	0x80
 
-	mov	eax,1
+	mov	rax,1
 	int	0x80
 section 	.data
 

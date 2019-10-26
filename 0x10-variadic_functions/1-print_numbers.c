@@ -16,7 +16,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		separator = "";
 	}
 	va_start(nums, n);
-	for (c = 0; c < n; c++)
+	c = 0;
+	while (c < n)
 	{
 		if (c < n - 1)
 		{
@@ -24,8 +25,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 		else
 		{
-			printf("%d\n", va_arg(nums, int));
+			printf("%d", va_arg(nums, int));
 		}
+		c++;
 	}
 	va_end(nums);
+	printf("\n");
 }

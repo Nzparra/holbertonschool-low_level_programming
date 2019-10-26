@@ -10,6 +10,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int c;
 	va_list string;
+	char * antslid;
 
 	if (separator == NULL)
 	{
@@ -18,11 +19,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_start(string, n);
 	for (c = 0; c < n; c++)
 	{
+		antslid = va_arg(string, char *);
 		if (c < n - 1)
 		{
-			if (va_arg(string, char *) != NULL)
+			if (antslid != NULL)
 			{
-				printf("%s%s", va_arg(string, char *), separator);
+				printf("%s%s", antslid, separator);
 			}
 			else
 			{
@@ -31,9 +33,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		else
 		{
-			if (va_arg(string, char *) != NULL)
+			if (antslid != NULL)
 			{
-					printf("%s\n", va_arg(string, char *));
+					printf("%s\n", antslid);
 			}
 			else
 			{

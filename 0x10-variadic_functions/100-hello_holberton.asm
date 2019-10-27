@@ -1,18 +1,16 @@
+section .rodata
+    msg:    db 'Hello, Holberton', 10
+    msglen: equ $-msg
+
 section .text
-
-	global main
-
-main:
-
-	mov	rdx,len
-	mov	rcx,msg
-	mov	rbx,1
-	mov	rax,4
-	int	0x80
-	mov	rax,1
-	int	0x80
-
-section 	.data
-
-msg 	db 'Hello, Holberton',0xa
-len	equ $ - msg
+        global main
+    main:
+        ; write(1, msg, msglen)
+        mov rdi, 1
+        mov rsi, msg
+        mov rdx, msglen
+        mov rax, 1
+        syscall
+        ; return 0
+        mov rax, 0
+        ret

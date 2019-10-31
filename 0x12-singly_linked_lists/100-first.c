@@ -1,15 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * before_main - Before main
  */
-int first(void)
+void __attribute__((constructor)) before_main()
 {
-    printf("A tortoise, having pretty good sense of a hare's nature, challenges one to a race.\n");
-    printf("I bore my house upon my back!\n");
-    return (0);
+	printf("A tortoise, having pretty good sense of a hare's nature,
+challenges one to a race.\n");
+	printf("I bore my house upon my back!\n");
 }
 
 

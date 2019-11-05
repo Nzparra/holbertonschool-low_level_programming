@@ -24,6 +24,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	for (c = 0; node && c < index - 1; c++)
 	{
 		node = node->next;
+		if (node == NULL)
+		{
+			return (-1);
+		}
 	}
 	if (node == NULL || node->next == NULL)
 	{

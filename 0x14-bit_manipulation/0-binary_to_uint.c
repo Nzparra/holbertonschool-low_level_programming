@@ -8,6 +8,10 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int loop, sum;
 
+	if (b == NULL)
+	{
+		return (0);
+	}
 	for (sum = 0, loop = 0 ; b[loop]; loop++)
 	{
 		if (b[loop] == '1')

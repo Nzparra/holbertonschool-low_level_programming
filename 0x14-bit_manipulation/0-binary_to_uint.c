@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * binary_to_uint - Converts to a int
  * @b : pointer to a string
